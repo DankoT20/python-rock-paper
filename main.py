@@ -5,10 +5,15 @@ def jatek():
     jatekosNyert = 0
     gepNyert = 0
     while True:
-        if db > 0:
+        if db > 0 and jatekosNyert < 2 and gepNyert < 2:
             print(f"Jelenlegi állás: \nJátékos:{jatekosNyert}\nGép:{gepNyert}\n ")
-            beValasztas = input("Add meg, hogy mit szeretnél választani: ")
-            beValasztas = beValasztas.lower()
+            while True:
+                beValasztas = input("Add meg, hogy mit szeretnél választani: ")
+                beValasztas = beValasztas.lower()
+                if lehetoseg.__contains__(beValasztas):
+                    break
+                else:
+                    print("Kérem a három lehetőségből válasszon!")
             randomValasztas = lehetoseg[random.randint(0, len(lehetoseg)-1)]
             print(f"A gép választása {randomValasztas}")
             if beValasztas == randomValasztas:
