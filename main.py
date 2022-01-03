@@ -8,6 +8,7 @@ def jatek():
         if db > 0:
             print(f"Jelenlegi állás: \nJátékos:{jatekosNyert}\nGép:{gepNyert}\n ")
             beValasztas = input("Add meg, hogy mit szeretnél választani: ")
+            beValasztas = beValasztas.lower()
             randomValasztas = lehetoseg[random.randint(0, len(lehetoseg)-1)]
             print(f"A gép választása {randomValasztas}")
             if beValasztas == randomValasztas:
